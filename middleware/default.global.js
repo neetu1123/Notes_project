@@ -8,7 +8,7 @@ export default async function(to, from) {
 //   stop navigation
    if(!notesList.length && to.path === "/notes/list") {
       alert('list is empty, please fill the data !')
-      return navigateTo(from)
+      return navigateTo('/')
    }
    
    if(to.name =='notes-id' && !notesList.length ){
