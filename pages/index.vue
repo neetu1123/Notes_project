@@ -9,6 +9,10 @@
       404
     </nuxt-link>
   </div>
+  <button>
+    click me
+  </button>
+  <button>click me</button>
 </template>
 
 <script setup>
