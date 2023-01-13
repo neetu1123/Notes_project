@@ -10,11 +10,9 @@ jobs:
   run-lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-      - uses: actions/checkout@v3
       - name: Super-Linter
         uses: github/super-linter@v4.10.0
-        env:
+    env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: "notes"
           IGNORE_GITIGNORED_FILES: true
