@@ -8,7 +8,9 @@ export default function define(to, from) {
   if (!notesList.length && to.path === "/notes/list") {
     return navigateTo("/");
   }
+  
   console.log(to, from);
+ 
   if (to.name === "notes-id" && !notesList.length) {
     console.log("rote error");
     return navigateTo("/404");
