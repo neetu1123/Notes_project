@@ -1,10 +1,17 @@
 <template>
-    <main class="bg-pink-100">
-        <h1 class="text-3xl font-bold text-center">Notelist</h1>
-        <!-- for add notes list title and description -->
-        <div class="inline-block mx-96">
-            <label for="" class="block mb-2 text-lg font-bold text-gray-900 dark:text-white">Title</label>
-            <input class="
+  <main class="bg-pink-100">
+    <h1 class="text-3xl font-bold text-center">
+      Notelist
+    </h1>
+    <!-- for add notes list title and description -->
+    <div class="inline-block mx-96">
+      <label
+        for="title"
+        class="block mb-2 text-lg font-bold text-gray-900 dark:text-white"
+      >Title</label>
+      <input
+        v-model="newTitle"
+        class="
           block
           w-[50vh]
           p-4
@@ -20,9 +27,17 @@
           dark:text-white
           dark:focus:ring-blue-500
           dark:focus:border-blue-500
-        " type="text" v-model="newTitle" placeholder="add title" />
-            <label for="" class="block mb-2 text-lg font-bold text-gray-900 dark:text-white">Description</label>
-            <input class="
+        "
+        type="text"
+        placeholder="add title"
+      />
+      <label
+        for="description"
+        class="block mb-2 text-lg font-bold text-gray-900 dark:text-white"
+      >Description</label>
+      <input
+        v-model="newDescription"
+        class="
           block
           w-[50vh]
           p-4
@@ -38,8 +53,15 @@
           dark:text-white
           dark:focus:ring-blue-500
           dark:focus:border-blue-500
-        " type="text" v-model="newDescription" @keypress.enter="addList" placeholder="add description" />
-            <button @click="addList" class="
+        "
+        type="text"
+        placeholder="add description"
+        @keypress.enter="addList"
+      />
+      // eslint-disable-next-line vue/html-button-has-type
+      <button
+        type="button"
+        class="
           text-white
           mt-4
           mb-96
@@ -56,11 +78,13 @@
           py-2.5
           text-center
           dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
-        ">
-                Add notes list
-            </button>
-        </div>
-    </main>
+        "
+        @click="addList"
+      >
+        Add notes list
+      </button>
+    </div>
+  </main>
 </template>
 
 <script setup>
@@ -73,11 +97,10 @@ const newDescription = ref("");
 console.log(store);
 
 function addList() {
-    if (newTitle.value && newDescription.value) {
-        store.addLists(newTitle.value, newDescription.value);
-        newTitle.value = "";
-        newDescription.value = "";
-    }
+  if (newTitle.value && newDescription.value) {
+    store.addLists(newTitle.value, newDescription.value);
+    newTitle.value = "";
+    newDescription.value = "";
+  }
 }
 </script>
-
