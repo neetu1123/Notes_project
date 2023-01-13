@@ -23,8 +23,10 @@ const useCounterStore = defineStore("counter", () => {
     return notesLists.value;
   });
 
+
   // return properties
   return {
+   
     filterData,
     addLists,
     getNoteByindex,

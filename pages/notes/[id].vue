@@ -20,5 +20,8 @@ const { id } = useRoute().params;
 const store = useCounterStore();
 
 const note = store.getNoteByindex(id);
+
+
+
 </script>
 

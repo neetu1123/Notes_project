@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- table list -->
-        <table class="border-collapse border border-slate-400 ...">
+        <table class="border-collapse border border-slate-400 ">
             <tr>
                 <th v-for="header in  headerOfArray " :key="header.index" class="px-10  border border-slate-300">{{
                     header
@@ -25,21 +25,23 @@
                         </svg>
                     </nuxt-link>
                 </td>
-                <td class=" mx-3 p-3 px-10 border border-slate-300 ...">
+                <td class=" mx-3 p-3 px-10 border border-slate-300 ">
                     <svg class=" h-6 text-red-600 font-bold mx-3" fill="none" stroke="currentColor" stroke-width="1.5"
                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
                     </svg>
                 </td>
-                <td class=" mx-3 p-3 px-10 border border-slate-300 ...">delete</td>
+
             </tr>
         </table>
     </div>
 </template>
 
 <script setup >
-defineProps(["notes", "notesList"]);
-const headerOfArray = ref(['S.no', 'Title', 'Description', 'View', 'Edit', 'Delete'])
+
+defineProps(["notesList", "remove"]);
+const headerOfArray = ref(['S.no', 'Title', 'Description', 'View', 'Edit'])
+
 </script>
 
 <style scoped>
