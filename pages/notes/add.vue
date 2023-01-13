@@ -60,7 +60,6 @@
       />
       // eslint-disable-next-line vue/html-button-has-type
       <button
-        type="button"
         class="
           text-white
           mt-4
