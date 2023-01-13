@@ -19,6 +19,7 @@ const useCounterStore = defineStore("counter", () => {
     return notesLists.value[index - 1];
   }
   // getter
+
   const filterData = computed(() => notesLists.value);
 
   // return properties
