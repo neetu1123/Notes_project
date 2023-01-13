@@ -3,9 +3,9 @@ name: Linter
 
 on:
   push:
-    branches: [ "note_shell_branch" ]
+    branches: [ "notes" ]
   pull_request:
-    branches: [ "note_shell_branch" ]
+    branches: [ "notes" ]
 jobs:
   run-lint:
     runs-on: ubuntu-latest
