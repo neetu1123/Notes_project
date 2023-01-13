@@ -15,4 +15,6 @@ jobs:
         with:
           node-version: 16
       - uses: keita-hino/vue-tsc-action@main
+      - run: npm install -g bats
+      - run: bats -v
        
