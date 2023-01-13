@@ -2,12 +2,17 @@ name: Lint Code Base
 
 on:
   push:
-   branches: [ "test_branch" ]
+   branches: [ "demo_branch" ]
   pull_request:
     branches: [ "note_branch" ]
 jobs:
-  run-lint:
+   vue-tsc:
     runs-on: ubuntu-latest
     steps:
       - name: Super-Linter
         uses: github/super-linter@v4.10.0
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - uses: keita-hino/vue-tsc-action@main
+       
