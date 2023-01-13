@@ -1,0 +1,16 @@
+
+name: Lint Code Base
+
+on:
+  push:
+    branches: [ "note_shell_branch" ]
+  pull_request:
+    branches: [ "note_shell_branch" ]
+jobs:
+  run-lint:
+    runs-on: ubuntu-latest
+    steps:
+          - uses: actions/checkout@v3
+          - name: Lint Code Base
+            uses: github/super-linter@v4
+        
