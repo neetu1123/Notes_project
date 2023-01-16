@@ -1,0 +1,12 @@
+ESLint:
+  enabled: true
+  args:
+    - --ext .js,.vue
+    - --config .eslintrc.js
+    - --ignore-path .gitignore
+
+Prettier:
+  enabled: true
+  args:
+    - --write
+    - "**/*.{js,vue}"

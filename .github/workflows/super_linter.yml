@@ -1,13 +1,16 @@
-name: Lint Code Base
+on: [push]
 
-on:
-  push:
-   branches: [ "test_branch" ]
-  pull_request:
-    branches: [ "note_branch" ]
 jobs:
-  run-lint:
+  lint:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Super-Linter
-        uses: github/super-linter@v4.10.0
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Lint all files
+      uses: github/super-linter@v3
+      with:
+        lint_configs_path: .github/linters
+        lint_patterns_path: .github/linters/patterns.yml
+        lint_rules_path: .github/linters/rules.yml
