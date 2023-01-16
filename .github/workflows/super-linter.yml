@@ -1,0 +1,16 @@
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Lint all files
+      uses: github/super-linter@v3
+      with:
+        lint_configs_path: .github/linters
+        lint_patterns_path: .github/linters/patterns.yml
+        lint_rules_path: .github/linters/rules.yml
