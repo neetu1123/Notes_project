@@ -3,7 +3,7 @@ name: Lint Code Base
 
 on:
   push:
-   branches: [ "demo_branch" ]
+   branches: [ "test_branch" ]
   pull_request:
     branches: [ "note_branch" ]
 jobs:
