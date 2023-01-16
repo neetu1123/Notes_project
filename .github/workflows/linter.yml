@@ -1,5 +1,5 @@
 
-name: Lint Code Base
+name: vue-tsc-code
 
 on:
   push:
