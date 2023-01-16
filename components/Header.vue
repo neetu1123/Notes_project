@@ -9,6 +9,8 @@
           <li class="text-xl">
             <nuxt-link to="/notes/add">
               Add Notes list
+
+
             </nuxt-link>
           </li>
           <li class="text-xl">
