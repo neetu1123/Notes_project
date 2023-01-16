@@ -1,0 +1,12 @@
+name: Lint Code Base
+
+on:
+  
+  pull_request:
+    branches: [ "note_branch" ]
+jobs:
+  run-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Super-Linter
+        uses: github/super-linter@v4.10.0
